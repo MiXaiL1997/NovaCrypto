@@ -5,8 +5,35 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:NovaCrypto"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="519" Width="593">
+
     <Grid>
-        
+        <TabControl>
+            <TabItem Header="Щифр скитала">
+                <TabControl>
+                    <TabItem Header="Защифровать">
+                        <Grid>
+                            <TextBox HorizontalAlignment="Left" Height="145" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="553" Margin="10,31,0,0"/>
+                            <Label Content="Исходный текст:" Margin="10,5,460,401"/>
+                            <TextBox HorizontalAlignment="Left" Height="163" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="553" Margin="10,259,0,0"/>
+                            <Label Content="Зашифрованный текст:" Margin="10,229,425,178"/>
+                            <Button Content="Защифровать" Margin="242,199,245,210"/>
+                            <TextBox HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="119" Margin="10,199,0,0" RenderTransformOrigin="0.874,-1.2"/>
+                            <Label Content="Диаметр:" Margin="10,176,425,231"/>
+                        </Grid>
+                    </TabItem>
+                    <TabItem Header="Расшифровать">
+
+                    </TabItem>
+
+                </TabControl>
+
+
+            </TabItem>
+            <TabItem Header="Поточное шифрование">
+
+            </TabItem>
+
+        </TabControl>
     </Grid>
 </Window>
