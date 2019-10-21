@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:NovaCrypto"
         mc:Ignorable="d"
-        Title="MainWindow" Height="519" Width="593">
+        Title="MainWindow" Height="544" Width="598" Loaded="Window_Loaded">
 
     <Grid>
         <TabControl>
@@ -13,13 +13,13 @@
                 <TabControl>
                     <TabItem Header="Защифровать">
                         <Grid>
-                            <TextBox HorizontalAlignment="Left" Height="145" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="553" Margin="10,31,0,0"/>
-                            <Label Content="Исходный текст:" Margin="10,5,460,401"/>
-                            <TextBox HorizontalAlignment="Left" Height="163" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="553" Margin="10,259,0,0"/>
-                            <Label Content="Зашифрованный текст:" Margin="10,229,425,178"/>
-                            <Button Content="Защифровать" Margin="242,199,245,210"/>
-                            <TextBox HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="119" Margin="10,199,0,0" RenderTransformOrigin="0.874,-1.2"/>
-                            <Label Content="Диаметр:" Margin="10,176,425,231"/>
+                            <TextBox x:Name="ScytalInputText1" HorizontalAlignment="Left" Height="140" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="553" Margin="10,36,0,0"/>
+                            <Label Content="Исходный текст:" Margin="10,5,444,0" Height="56" VerticalAlignment="Top"/>
+                            <TextBox x:Name="ScytalEnCryptedText1" HorizontalAlignment="Left" Height="163" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="553" Margin="10,284,0,0"/>
+                            <Label Content="Зашифрованный текст:" Margin="10,253,399,0" Height="31" VerticalAlignment="Top"/>
+                            <Button Content="Защифровать" Margin="153,209,334,0" Height="25" VerticalAlignment="Top" Click="Button_Click"/>
+                            <TextBox x:Name="diameter1" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" Width="119" Margin="10,209,0,0" RenderTransformOrigin="0.874,-1.2" PreviewTextInput="OnPreviewTextInput" DataObject.Pasting="OnPasting"/>
+                            <Label Content="Диаметр:" Margin="10,181,425,0" Height="28" VerticalAlignment="Top"/>
                         </Grid>
                     </TabItem>
                     <TabItem Header="Расшифровать">
