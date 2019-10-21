@@ -49,11 +49,18 @@ namespace NovaCrypto
         {
             ScytalEnCryptedText1.IsReadOnly = true;
             ScytalEnCryptedText1.IsReadOnlyCaretVisible = false;
+            ScytalDeCryptedText.IsReadOnly = true;
+            ScytalDeCryptedText.IsReadOnlyCaretVisible = false;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             ScytalEnCryptedText1.Text = ScytaleCipher.Encrypt(ScytalInputText1.Text, Convert.ToInt32(diameter1.Text));
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            ScytalDeCryptedText.Text = ScytaleCipher.Decrypt(ScytaEnCryptedText2.Text,Convert.ToInt32(diameter2.Text));
         }
     }
 }
