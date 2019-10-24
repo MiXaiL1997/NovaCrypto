@@ -62,5 +62,38 @@ namespace NovaCrypto
         {
             ScytalDeCryptedText.Text = ScytaleCipher.Decrypt(ScytaEnCryptedText2.Text,Convert.ToInt32(diameter2.Text));
         }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            string Input = StreamInputText1.Text;
+            string Output = String.Empty;
+            int keyS = Convert.ToInt32(key.Text);
+            for (int i = 0; i < Input.Length; i++)
+            {
+                char s = Input[i];
+                Output = Output + new CaesarCipher().Encrypt(s.ToString(), keyS);
+                keyS = (int)RandomGenerator.congruential(keyS, 100);
+            }
+            StreamEnCryptedText.Text = Output;
+        }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            StreamDeCryptedText1.Text = new CaesarCipher().Decrypt(StreamEnCryptedText2.Text, Convert.ToInt32(key2.Text));
+        }
+
+        private void Button_Click_4(object sender, RoutedEventArgs e)
+        {
+            string Input = StreamEnCryptedText2.Text;
+            string Output = String.Empty;
+            int keyS = Convert.ToInt32(key.Text);
+            for (int i = 0; i < Input.Length; i++)
+            {
+                char s = Input[i];
+                Output = Output + new CaesarCipher().Decrypt(s.ToString(), keyS);
+                keyS = (int)RandomGenerator.congruential(keyS, 20);
+            }
+            StreamDeCryptedText1.Text = Output;
+        }
     }
 }
