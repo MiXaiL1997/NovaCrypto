@@ -41,34 +41,67 @@
             </TabItem>
             <TabItem Header="Поточное шифрование">
                 <TabControl>
-                <TabItem Header="Защифровать">
-                    <Grid>
-                        <TextBox x:Name="StreamInputText1" HorizontalAlignment="Left" Height="140" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="553" Margin="10,36,0,0"/>
-                        <Label Content="Исходный текст:" Margin="10,5,444,0" Height="56" VerticalAlignment="Top"/>
-                        <TextBox x:Name="StreamEnCryptedText" HorizontalAlignment="Left" Height="163" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="553" Margin="10,284,0,0"/>
-                        <Label Content="Зашифрованный текст:" Margin="10,253,399,0" Height="31" VerticalAlignment="Top"/>
-                        <Button Content="Защифровать" Margin="153,209,334,0" Height="25" VerticalAlignment="Top" Click="Button_Click_2"/>
-                        <TextBox x:Name="key" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" Width="119" Margin="10,209,0,0" RenderTransformOrigin="0.874,-1.2" PreviewTextInput="OnPreviewTextInput" DataObject.Pasting="OnPasting"/>
-                        <Label Content="Ключ:" Margin="10,181,425,0" Height="28" VerticalAlignment="Top"/>
-                    </Grid>
-                </TabItem>
-                <TabItem Header="Расшифровать">
-                    <Grid>
-                        <TextBox x:Name="StreamEnCryptedText2" HorizontalAlignment="Left" Height="140" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="553" Margin="10,36,0,0"/>
-                        <Label Content="Зашифрованный текст:" Margin="10,5,444,0" Height="31" VerticalAlignment="Top"/>
-                        <TextBox x:Name="StreamDeCryptedText1" HorizontalAlignment="Left" Height="163" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="553" Margin="10,284,0,0"/>
-                        <Label Content="Разшифрованный текст:" Margin="10,253,399,0" Height="31" VerticalAlignment="Top"/>
-                        <Button Content="Разшифровать" Margin="153,209,334,0" Height="25" VerticalAlignment="Top" Click="Button_Click_4"/>
-                        <TextBox x:Name="key2" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" Width="119" Margin="10,209,0,0" RenderTransformOrigin="0.874,-1.2" PreviewTextInput="OnPreviewTextInput" DataObject.Pasting="OnPasting"/>
-                        <Label Content="Ключ:" Margin="10,181,425,0" Height="28" VerticalAlignment="Top"/>
-                    </Grid>
+                    <TabItem Header="Защифровать">
+                        <Grid>
+                            <TextBox x:Name="StreamInputText1" HorizontalAlignment="Left" Height="140" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="553" Margin="10,36,0,0"/>
+                            <Label Content="Исходный текст:" Margin="10,5,444,0" Height="56" VerticalAlignment="Top"/>
+                            <TextBox x:Name="StreamEnCryptedText" HorizontalAlignment="Left" Height="163" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="553" Margin="10,284,0,0"/>
+                            <Label Content="Зашифрованный текст:" Margin="10,253,399,0" Height="31" VerticalAlignment="Top"/>
+                            <Button Content="Защифровать" Margin="153,209,334,0" Height="25" VerticalAlignment="Top" Click="Button_Click_2"/>
+                            <TextBox x:Name="key" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" Width="119" Margin="10,209,0,0" RenderTransformOrigin="0.874,-1.2" PreviewTextInput="OnPreviewTextInput" DataObject.Pasting="OnPasting"/>
+                            <Label Content="Ключ:" Margin="10,181,425,0" Height="28" VerticalAlignment="Top"/>
+                        </Grid>
+                    </TabItem>
+                    <TabItem Header="Расшифровать">
+                        <Grid>
+                            <TextBox x:Name="StreamEnCryptedText2" HorizontalAlignment="Left" Height="140" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="553" Margin="10,36,0,0"/>
+                            <Label Content="Зашифрованный текст:" Margin="10,5,444,0" Height="31" VerticalAlignment="Top"/>
+                            <TextBox x:Name="StreamDeCryptedText1" HorizontalAlignment="Left" Height="163" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="553" Margin="10,284,0,0"/>
+                            <Label Content="Разшифрованный текст:" Margin="10,253,399,0" Height="31" VerticalAlignment="Top"/>
+                            <Button Content="Разшифровать" Margin="153,209,334,0" Height="25" VerticalAlignment="Top" Click="Button_Click_4"/>
+                            <TextBox x:Name="key2" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" Width="119" Margin="10,209,0,0" RenderTransformOrigin="0.874,-1.2" PreviewTextInput="OnPreviewTextInput" DataObject.Pasting="OnPasting"/>
+                            <Label Content="Ключ:" Margin="10,181,425,0" Height="28" VerticalAlignment="Top"/>
+                        </Grid>
 
-                </TabItem>
+                    </TabItem>
+                </TabControl>
+            </TabItem>
+            <TabItem Header="RSA">
+                <TabControl>
+                    <TabItem Header="Защифровать">
+                        <Grid>
+                            <TextBox x:Name="RSAInput" HorizontalAlignment="Left" Height="140" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="553" Margin="10,36,0,0"/>
+                            <Label Content="Исходный текст:" Margin="10,5,444,0" Height="56" VerticalAlignment="Top"/>
+                            <TextBox x:Name="RSAOutput" HorizontalAlignment="Left" Height="163" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="553" Margin="10,284,0,0"/>
+                            <Label Content="Зашифрованный текст:" Margin="10,253,399,0" Height="31" VerticalAlignment="Top"/>
+                            <Button Content="Защифровать" Margin="219,209,268,0" Height="25" VerticalAlignment="Top" Click="Button_Click_5"/>
+                            <TextBox x:Name="RSAP" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" Width="42" Margin="10,209,0,0" RenderTransformOrigin="0.874,-1.2"  DataObject.Pasting="OnPasting"/>
+                            <Label Content="P:" Margin="10,181,526,0" Height="28" VerticalAlignment="Top"/>
+                            <TextBox x:Name="RSAQ" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" Width="42" Margin="57,209,0,0" RenderTransformOrigin="0.874,-1.2" DataObject.Pasting="OnPasting"/>
+                            <TextBox x:Name="RSAD" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" Width="42" Margin="125,209,0,0" RenderTransformOrigin="0.874,-1.2"  DataObject.Pasting="OnPasting"/>
+                            <TextBox x:Name="RSAN" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" Width="42" Margin="172,209,0,0" RenderTransformOrigin="0.874,-1.2"  DataObject.Pasting="OnPasting"/>
+                            <Label Content="Q:" Margin="57,181,479,0" Height="28" VerticalAlignment="Top"/>
+                            <Label Content="D:" Margin="125,181,411,0" Height="28" VerticalAlignment="Top"/>
+                            <Label Content="N:" Margin="172,181,364,0" Height="28" VerticalAlignment="Top"/>
+                        </Grid>
+                    </TabItem>
+                    <TabItem Header="Расшифровать">
+                        <Grid>
+                            <TextBox x:Name="RSAInput2" HorizontalAlignment="Left" Height="140" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="553" Margin="10,36,0,0"/>
+                            <Label Content="Зашифрованный текст:" Margin="10,5,444,0" Height="31" VerticalAlignment="Top"/>
+                            <TextBox x:Name="RSAOutput2" HorizontalAlignment="Left" Height="163" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="553" Margin="10,284,0,0"/>
+                            <Label Content="Разшифрованный текст:" Margin="10,253,399,0" Height="31" VerticalAlignment="Top"/>
+                            <Button Content="Разшифровать" Margin="219,209,268,0" Height="25" VerticalAlignment="Top" Click="Button_Click_6"/>
+                            <TextBox x:Name="RSAP2" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" Width="42" Margin="10,209,0,0" RenderTransformOrigin="0.874,-1.2"  DataObject.Pasting="OnPasting"/>
+                            <TextBox x:Name="RSAQ2" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" Width="42" Margin="57,209,0,0" RenderTransformOrigin="0.874,-1.2" DataObject.Pasting="OnPasting"/>
+                            <TextBox x:Name="RSAD2" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" Width="42" Margin="125,209,0,0" RenderTransformOrigin="0.874,-1.2"  DataObject.Pasting="OnPasting"/>
+                            <TextBox x:Name="RSAN2" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" Width="42" Margin="172,209,0,0" RenderTransformOrigin="0.874,-1.2"  DataObject.Pasting="OnPasting"/>
+                            <Label Content="Ключ:" Margin="10,181,425,0" Height="28" VerticalAlignment="Top"/>
+                        </Grid>
 
-        </TabControl>
-
-        </TabItem>
-
+                    </TabItem>
+                </TabControl>
+            </TabItem>
         </TabControl>
     </Grid>
 </Window>
